@@ -8,6 +8,8 @@ DB_CONN = "postgresql://airflow:airflow@localhost:5432/airflow"
 def step_impl(context):
     with psycopg.connect(DB_CONN) as conn:
         with conn.cursor() as cur:
-            cur.execute("""
+            cur.execute(
+                """
                         SELECT * FROM dag;
-                """)
+                """
+            )

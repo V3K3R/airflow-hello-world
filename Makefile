@@ -4,6 +4,9 @@ init:
 bootstrap:
 	docker compose up
 
+format:
+	pipenv run black .
+
 test:
 	pipenv run behave ./tests
 
