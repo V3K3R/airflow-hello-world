@@ -5,8 +5,12 @@ name = "pypi"
 
 [packages]
 apache-airflow = "*"
+apache-airflow-providers-postgres = "*"
 
 [dev-packages]
+behave = "*"
+black = "*"
+psycopg = {extras = ["binary"], version = "*"}
 
 [requires]
 python_version = "3.11"
